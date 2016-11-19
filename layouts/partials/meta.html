@@ -1,0 +1,26 @@
+<meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="theme-color" content="#263238">
+{{ with .Site.Params.contact }}<meta name="contact" content="{{ . }}">{{ end }}
+{{ .Hugo.Generator }}
+
+<link rel="apple-touch-icon" href="{{ .Site.BaseURL }}images/logo.png">
+{{ with .RSSLink }}<link rel="alternate" type="application/rss+xml" title="RSS" href="{{ . }}">{{ end }}
+
+<link rel="canonical" href="{{ .Permalink }}">
+
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="freks tips" />
+<meta property="og:description" content="freks tips" />
+<meta property="og:image" content="{{ .Site.BaseURL }}images/logo.png" />
+<meta property="og:image:width" content="64" />
+<meta property="og:image:height" content="64" />
+<meta property="fb:app_id" content="1742613816065078" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@freks_owner" />
+<meta name="twitter:title" content="freks tips" />
+<meta name="twitter:description" content="freks tips" />
+<meta name="twitter:image" content="{{ .Site.BaseURL }}images/logo.png" />
+
