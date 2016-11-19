@@ -1,3 +1,3 @@
 #!/bin/sh
 
-hugo server --theme=hugo_theme_robust --buildDrafts
+env HUGO_ENV="DEV" hugo server --theme=hugo_theme_robust --buildDrafts
