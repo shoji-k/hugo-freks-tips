@@ -1,10 +1,9 @@
 +++
 title = "start_hugo"
-draft = true
-date = "2016-11-18T17:41:38+09:00"
+draft = false
+date = "2016-11-21T10:49:54+09:00"
 
 +++
-
 
 最新リリースをダウンロード  
 [Releases · spf13/hugo](https://github.com/spf13/hugo/releases)
