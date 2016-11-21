@@ -2,7 +2,7 @@
 
 {{ define "main" }}
 <div class="row">
-  <div class="col-md-8 pull-right">
+  <div class="col-md-8">
 
     {{ if not .IsHome }}
     <header class="p-page-title">
@@ -19,7 +19,7 @@
 
     {{ partial "pagination.html" . }}
   </div>
-  <div class="col-md-4 pull-left">
+  <div class="col-md-4">
     {{ partial "sidebar.html" . }}
   </div>
 </div>
