@@ -2,6 +2,7 @@
 title = "start hugo"
 draft = false
 date = "2016-11-21T10:49:54+09:00"
+categories = [ "engineer" ]
 tags = [ "hugo" ]
 
 +++

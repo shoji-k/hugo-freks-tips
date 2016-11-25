@@ -2,6 +2,7 @@
 draft = false
 date = "2016-11-24T18:30:59+09:00"
 title = "docker compose"
+categories = [ "engineer" ]
 tags = [ "docker" ]
 
 +++

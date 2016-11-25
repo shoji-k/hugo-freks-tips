@@ -2,7 +2,7 @@
 title = "sub earnings"
 draft = false
 date = "2016-11-21T18:08:25+09:00"
-categories = [ "" ]
+categories = [ "memo" ]
 tags = [ "earnings" ]
 
 +++
