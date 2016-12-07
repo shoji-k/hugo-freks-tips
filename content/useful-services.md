@@ -7,5 +7,10 @@ tags = [ "useful" ]
 
 +++
 
+
+design prototype and collaboration tool  
+[Figma: the collaborative interface design tool\.](https://www.figma.com/)
+
+
 WEBサイトを簡単に用意する  
 [驚くほどカンタン！無料ホームページ作成 \| ペライチ](https://peraichi.com/)
