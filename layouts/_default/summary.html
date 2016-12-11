@@ -14,7 +14,7 @@
       {{ end }}
     </ul>
 
-    <div class="article-body">{{ .Content }}</div>
+    <div class="article-body">{{ replace .Content "<table>" "<table class='table'>" | markdownify }}</div>
   </div>
 
   <footer class="article-footer">
