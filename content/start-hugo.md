@@ -58,3 +58,21 @@ $ hugo undraft content/post/good-to-great.md
 publicディレクトリにアウトプット  
 $ hugo --theme=robust
 
+#### tableタグにclassを追加する
+
+hugo-robust-themeの場合  
+$ vim layouts/_default/summary.html
+
+before  
+
+```
+<div class="article-body">{{ .Content }}</div>
+```
+
+after  
+
+```
+<div class="article-body">{{ replace .Content "<table>" "<table class='table'>" | markdownify }}</div>
+```
+
+see [Support for Kramdown/Maruku attribute lists in markdown files · Issue \#1585 · spf13/hugo](https://github.com/spf13/hugo/issues/1585)
