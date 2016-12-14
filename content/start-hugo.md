@@ -76,3 +76,18 @@ after
 ```
 
 see [Support for Kramdown/Maruku attribute lists in markdown files · Issue \#1585 · spf13/hugo](https://github.com/spf13/hugo/issues/1585)
+
+#### baseUrlにサブディレクトリを使う
+
+サブディレクトリがあると、ページャーのリンクがうまく動かない  
+e.g. 次へをクリックするとlocalhost/sub/pages/2へ遷移せず、localhost/pages/2へ遷移する  
+
+$ vim config.toml
+
+```
+relativeURLS = true
+canonifyurls = true
+```
+
+を追加で解決
+

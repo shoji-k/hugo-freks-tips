@@ -1,3 +1,5 @@
 languageCode = "ja"
 baseurl = "https://freks.jp/tips/"
 title = "freks tips"
+relativeURLS = true
+canonifyurls = true
