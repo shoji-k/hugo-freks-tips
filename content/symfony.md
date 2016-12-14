@@ -19,6 +19,9 @@ $ php app/check.php
 or  
 access http://localhost:8000/config.php  
 
+使えるservicesを確認  
+php app/console debug:container  
+
 起動  
 $ php app/console server:run
 
