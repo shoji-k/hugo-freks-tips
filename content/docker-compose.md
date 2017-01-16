@@ -169,6 +169,9 @@ $ docker exec some-mysql sh -c 'exec mysqldump --all-databases -uroot -p"$MYSQL_
 dump one database (wordpress)  
 $ docker exec some-mysql sh -c 'exec mysqldump wordpress -uroot -p"$MYSQL_ROOT_PASSWORD"' > dump.dbbackup
 
+dump tables  
+$ docker exec container_name sh -c 'exec mysqldump -uroot -ppassword -t sample_database table_name' > table.dbbackup
+
 # mysql image
 
 docker run command  
