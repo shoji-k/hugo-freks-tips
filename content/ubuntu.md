@@ -1,7 +1,7 @@
 +++
 title = "ubuntu"
-draft = true
-date = "2016-12-26T16:33:24+09:00"
+draft = false
+date = "2017-01-16T16:34:24+09:00"
 categories = [ "engineer" ]
 tags = [ "ubuntu" ]
 
