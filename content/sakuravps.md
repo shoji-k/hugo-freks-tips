@@ -104,6 +104,11 @@ sshログの確認
 journalctl -u sshd.service
 ```
 
+#### centos update
+
+```
+$ sudo yum update
+```
 
 
 
