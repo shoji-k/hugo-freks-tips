@@ -11,6 +11,7 @@ tags = [ "docker" ]
 
 reffer to:  
 [Install Docker and run hello\-world \- Docker](https://docs.docker.com/engine/getstarted/step_one/)  
+Centos 7: [Get Docker for CentOS \- Docker](https://docs.docker.com/engine/installation/linux/centos/)
 
 $ curl -fsSL https://get.docker.com/ | sh  
 $ sudo usermod -aG docker user  
