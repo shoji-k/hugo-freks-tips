@@ -13,6 +13,8 @@ reffer to:
 [Install Docker and run hello\-world \- Docker](https://docs.docker.com/engine/getstarted/step_one/)  
 Centos 7: [Get Docker for CentOS \- Docker](https://docs.docker.com/engine/installation/linux/centos/)
 
+non-root user: [Post\-installation steps for Linux \- Docker](https://docs.docker.com/engine/installation/linux/linux-postinstall/)  
+
 $ curl -fsSL https://get.docker.com/ | sh  
 $ sudo usermod -aG docker user  
 $ sudo service docker restart  
@@ -23,9 +25,9 @@ $ curl -fsSL https://get.docker.com/gpg | sudo apt-key add -
 
 $ docker -v  
 
-{% highlight text %}
+```
 Docker version 1.11.0, build 4dc5990
-{% endhighlight %}
+```
 
 check docker  
 $ docker run hello-world
