@@ -279,6 +279,15 @@ save token to ~/.docker/config.json
 
 $ docker push shojik/docker-whale  
 
+## implement composer install
+
+use  
+[composer/composer \- Docker Hub](https://hub.docker.com/r/composer/composer/)
+
+docker pull composer/composer  
+move the directory include composer.json  
+$ docker run --rm -v $(pwd):/app composer/composer install  
+
 ## refferences
 
 - [Dockerのライフサイクルを理解するハンズオン資料 - Qiita](http://qiita.com/zembutsu/items/d146295cfcf69c205c1e)
