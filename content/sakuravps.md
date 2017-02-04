@@ -110,6 +110,15 @@ journalctl -u sshd.service
 $ sudo yum update
 ```
 
+#### open http port of firewall
 
+```
+$ sudo firewall-cmd --add-service=http --zone=public
+$ sudo firewall-cmd --add-service=https --zone=public
+```
 
+#### git
+
+git was already installed  
+so do config  
 
