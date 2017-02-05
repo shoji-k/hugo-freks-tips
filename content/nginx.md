@@ -12,7 +12,15 @@ tags = [ "nginx" ]
 centos 7  
 $ sudo nginx -t  
 
+#### initial
+
+$ vim /etc/nginx/conf.d/default.conf
+
+- add server_tokens: off to html {}
+
 #### プロキシ設定
+
+$ vim /etc/nginx/conf.d/default.conf
 
 ```
 upstream backend {
