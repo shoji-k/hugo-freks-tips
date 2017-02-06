@@ -15,4 +15,6 @@ $ find . -maxdepth 1 -size 0 -print | xargs rm
 
 $ cd -
 
+#### 文字化けしたファイル名を修正する
 
+find . -maxdepth 1 -type f | xargs convmv -f sjis -t utf8
