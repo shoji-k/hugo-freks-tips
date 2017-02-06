@@ -63,3 +63,20 @@ server {
     }
 }
 ```
+
+#### キャッシュプロキシ
+
+```
+http {
+    proxy_cache_path /var/cache/nginx/cache levels=1:2 keys_zone=cachezone:60m max_size=1G inactive=7d;
+
+    location ~* \.(html|css|jpg|gif|ico|js)$ {
+        expires 1d;
+        proxy_cache cachezone;
+        proxy_cache_key $host$uri$is_args$args;
+        proxy_cache_valid 200 301 302 1d;
+        proxy_pass http://backend;
+    }
+}
+'''
+
