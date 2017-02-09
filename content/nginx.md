@@ -80,3 +80,17 @@ http {
 }
 '''
 
+キャッシュを削除する
+
+cssを含むリンクのみ
+
+```
+grep -lr "css" /var/cache/nginx/ | xargs rm -f
+```
+
+特定のリンク
+
+```
+grep -lr "http://sample.com/" /var/cache/nginx/ | xargs rm -f
+```
+
