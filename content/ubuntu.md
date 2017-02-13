@@ -19,3 +19,18 @@ Alt + F7
 
 [Ubuntu系Linuxに標準で入っているデスクトップ共有を試してみる \| 気ままにライフ](http://kimamanilife.com/archives/459)
 
+#### デーモン起動
+
+設定を確認
+
+```
+$ sysv-rc-conf --list
+```
+
+ON or OFF
+
+```
+$ sysv-rc-conf apache2 on
+$ sysv-rc-conf apache2 off
+```
+
