@@ -78,7 +78,7 @@ http {
         proxy_pass http://backend;
     }
 }
-'''
+```
 
 キャッシュを削除する
 
