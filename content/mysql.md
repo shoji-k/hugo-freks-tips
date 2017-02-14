@@ -61,3 +61,20 @@ show databases;
 
 # connect
 mysql -u user -h hostname -P portnum -p (database name)  
+
+# avoid truncate foreign key error
+
+外部キー制約でテーブルにレコードがなくてもエラーが発生する  
+
+```
+truncate plg_owner;
+ERROR 1701 (42000): Cannot truncate a table referenced in a foreign key constraint (`sample`.`d_owner_job`, CONSTRAINT `FK_FAD08FB17E3C61F9` FOREIGN KEY (`owner_id`) REFERENCES `sample`.`d_owner` (`owner_id`))
+```
+
+一時的に外部キー参照チェックをOFFしてtruncateする  
+
+```
+set foreign_key_checks = 0;
+truncate some_table;
+set foreign_key_checks = 1;
+```
