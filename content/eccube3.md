@@ -68,3 +68,12 @@ $ php app/console cache:clear
 セッション情報も含めて削除  
 $ php app/console cache:clear --all
 
+#### doctrine
+
+check and update  
+
+```
+./vendor/bin/doctrine orm:schema-tool:update --dump-sql
+./vendor/bin/doctrine orm:schema-tool:update --force
+```
+
