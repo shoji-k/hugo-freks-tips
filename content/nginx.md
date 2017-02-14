@@ -94,3 +94,25 @@ grep -lr "css" /var/cache/nginx/ | xargs rm -f
 grep -lr "http://sample.com/" /var/cache/nginx/ | xargs rm -f
 ```
 
+#### basic認証
+
+htpasswdでパスワードファイルを作る
+
+##### centos7
+
+htpasswdをインストール
+
+```
+$ sudo yum install httpd-tools
+```
+
+$ sudo htpasswd -c /etc/nginx/.htpasswd username  
+$ sudo vim /etc/nginx/conf.d/default.conf
+
+```
+auth_basic "好きなrealmを";
+auth_basic_ user_file /etc/nginx/.htpasswd;
+```
+
+
+
