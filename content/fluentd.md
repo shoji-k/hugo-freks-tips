@@ -80,7 +80,7 @@ $ ps aufx | grep td-agent
 設定ファイル
 
 ```
-$ sudo vim /etc/td-agent/td-agent.conf 
+$ sudo vim /etc/td-agent/td-agent.conf
 ```
 
 #### \<system>
@@ -98,4 +98,45 @@ Fluentdのコアの動作を設定
 #### \<include>
 
 外部ファイルの設定を読み込む
+
+### rootize
+
+エラーログなど権限不足で読めないので、td-agentをrootで起動する  
+
+```
+$ sudo vim /etc/init.d/td-agent
+
+TD_AGENT_USER=root
+TD_AGENT_GROUP=root
+
+$ service td-agent restart
+```
+
+### example 1
+
+nginx access logをtd-agent.logに出力する
+
+$ vim /etc/td-agent/td-agent.conf  
+
+```
+<match debug.**>
+  @type stdout
+</match>
+
+<source>
+  @type tail
+  path /var/log/nginx/sample-access.log
+  tag debug.sample-access
+  pos_file /var/log/td-agent/sample-access.log.pos
+  format /^(?<remote>[^ ]*) (?<host>[^ ]*) (?<user>[^ ]*) \[(?<time>[^\]]*)\] "(?<method>\S+)(?: +(?<path>[^ ]*) +\S*)?" (?<code>[^ ]*) (?<size>[^ ]*)(?: "(?<referer>[^\"]*)" "(?<agent>[^\"]*)" "(?<forwarder>[^\"]*)")?/
+  time_format %d/%b/%Y:%H:%M:%S %z
+</source>
+```
+
+$ tail /var/log/td-agent/td-agent.log
+
+```
+2017-02-15 21:26:44 +0900 debug.sample-access: {"remote":"xxx.xxx.xxx.xxx","host":"-","user":"-","metho
+6_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36","forwarder":"-"}
+```
 
