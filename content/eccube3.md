@@ -77,3 +77,8 @@ check and update
 ./vendor/bin/doctrine orm:schema-tool:update --force
 ```
 
+#### log
+
+see [ログ出力設定 \| EC\-CUBE 開発ドキュメント](http://ec-cube.github.io/guideline_log)
+
+
