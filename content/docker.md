@@ -288,6 +288,22 @@ docker pull composer/composer
 move the directory include composer.json  
 $ docker run --rm -v $(pwd):/app composer/composer install  
 
+## security check
+
+see [docker/docker\-bench\-security: The Docker Bench for Security is a script that checks for dozens of common best\-practices around deploying Docker containers in production\.](https://github.com/docker/docker-bench-security)
+
+コマンド実行すると、判定してくれる
+
+```
+$ docker run -it --net host --pid host --cap-add audit_control \
+    -e DOCKER_CONTENT_TRUST=$DOCKER_CONTENT_TRUST \
+    -v /var/lib:/var/lib \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v /usr/lib/systemd:/usr/lib/systemd \
+    -v /etc:/etc --label docker_bench_security \
+    docker/docker-bench-security
+```
+
 ## refferences
 
 - [Dockerのライフサイクルを理解するハンズオン資料 - Qiita](http://qiita.com/zembutsu/items/d146295cfcf69c205c1e)
