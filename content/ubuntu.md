@@ -34,3 +34,6 @@ $ sysv-rc-conf apache2 on
 $ sysv-rc-conf apache2 off
 ```
 
+#### repository削除
+
+$ sudo add-apt-repository --remove ppa:sample/xxx
