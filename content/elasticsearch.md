@@ -61,3 +61,15 @@ services:
     links:
       - elast:elasticsearch
 ```
+
+index確認
+
+```
+curl -XGET http://localhost:9200/_cat/indices?v
+```
+
+index登録
+
+```
+curl -XPUT http://localhost:9200/customer?pretty
+```
