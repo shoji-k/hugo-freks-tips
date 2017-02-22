@@ -129,6 +129,16 @@ $ docker save -o (file) (image name)
 load saved docker image file  
 $ docker load -i (file)
 
+verify network  
+inspect command can show the network of the container  
+$ docker network ls
+
+let the container join the specified network  
+$ docker run -d --net=my-bridge-network --name db training/postgres  
+
+change the network  
+$ docker network connect my-bridge-network web  
+
 # docker run parameters
 
 -d -> deamon  
