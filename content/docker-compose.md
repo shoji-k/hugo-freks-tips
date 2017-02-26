@@ -176,7 +176,7 @@ dump tables
 $ docker exec container_name sh -c 'exec mysqldump -uroot -ppassword -t sample_database table_name' > table.dbbackup
 
 restore sql  
-$ docker exec -i container_name mysql -uroot -ppassword < dump.sql
+$ docker exec -i container_name mysql sample_database -uroot -ppassword < dump.sql
 
 # mysql image
 

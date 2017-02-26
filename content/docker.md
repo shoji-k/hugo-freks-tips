@@ -310,6 +310,14 @@ docker pull composer/composer
 move the directory include composer.json  
 $ docker run --rm -v $(pwd):/app composer/composer install  
 
+# backup mysql data container
+
+backup  
+$ docker run --rm --volumes-from dataonly -v $(pwd):/backup dataonly tar cvf /backup/backup.tar /var/lib/mysql
+
+restore  
+$ docker run --rm --volumes-from dataonly -v $(pwd):/backup dataonly sh -c "cd /var/lib/ && tar -xvf /backup/backup.tar"
+
 ## security check
 
 see [docker/docker\-bench\-security: The Docker Bench for Security is a script that checks for dozens of common best\-practices around deploying Docker containers in production\.](https://github.com/docker/docker-bench-security)
