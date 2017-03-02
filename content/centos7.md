@@ -62,3 +62,14 @@ sudo yum install certbot
 sudo yum remove certbot
 ```
 
+#### rpm
+
+##### install
+
+$ rpm -ivh sample.rpm
+
+#### show places
+
+$ rpm -ql sample
+
+
