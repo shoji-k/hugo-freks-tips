@@ -178,6 +178,10 @@ $ docker exec container_name sh -c 'exec mysqldump -uroot -ppassword -t sample_d
 restore sql  
 $ docker exec -i container_name mysql sample_database -uroot -ppassword < dump.sql
 
+# delete docker volumes
+
+$ docker volume rm $(docker volume ls -qf dangling=true)
+
 # mysql image
 
 docker run command  
