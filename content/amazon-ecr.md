@@ -1,7 +1,9 @@
 +++
 title = "amazon ecr"
-draft = true
+draft = false
 date = "2017-03-08T15:00:14+09:00"
+categories = [ "engineer" ]
+tags = [ "aws", "ecr" ]
 
 +++
 
