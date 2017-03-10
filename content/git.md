@@ -7,7 +7,18 @@ tags = [ "git" ]
 
 +++
 
-#### start to use git
+# tips
+
+手元のブランチを削除する  
+$ git branch -d (sample)  
+
+リモートリポジトリのブランチを削除する  
+$ git push origin :(sample)
+
+リモートリポジトリで削除されたブランチが手元で残っているとき削除する  
+$ git remote prune origin  
+
+# start to use git
 
 ```
 git config --global user.name (name)
@@ -23,7 +34,7 @@ git config --global push.default=simple
 git config --global commit.verbose=true
 ```
 
-#### connect bitbucket using name changed ssh key (not id_rsa)
+# connect bitbucket using name changed ssh key (not id_rsa)
 
 prepare ssh key (ex. deploykey_rsa)  
 register ssh public key to bitbucket account or repository  
@@ -51,4 +62,56 @@ $ vim .gitconfig
 [url "bitbucket:"]
     InsteadOf = git@bitbucket.org:
 ```
+
+# use gpg
+
+## on ubuntu
+
+gpg is installed by default  
+gpg2 is not installed by default  
+gpg2 is gpg v2  
+
+refer to: [GitHubでGPGにより署名されたcommitにバッジが表示されるようになったので設定してみる - Qiita](http://qiita.com/prince_0203/items/ef0e12f2f6d150ff0485)  
+
+## create gpg key
+
+$ gpg --gen-key  
+
+follow the instruction  
+wait for a long time  
+
+$ gpg --list-keys  
+
+```
+pub   4096R/xxxxxxxx 2016-04-10
+uid           sample foobar <sample@sample.com>
+sub   4096R/yyyyyyyy 2016-04-10
+```
+
+xxxxxxxx is the id  
+
+show public key  
+$ gpg --armor --export コピーした鍵のID  
+
+copy and paste in the github setting  
+
+$ git config --global gpg.program gpg  
+$ git config --global user.signingkey コピーした鍵のID  
+$ git config --global commit.gpgsign true  
+
+## copy gpg key
+
+copy .gnupg directory  
+-> this didn't work because git version was old  
+
+# change gpg passphrase
+
+$ gpg --edit-key (key id)  
+> passwd  
+> (input old passphrase and new passphrase)  
+
+
+
+
+
 
