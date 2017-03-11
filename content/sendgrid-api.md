@@ -68,6 +68,22 @@ $ curl --request GET \
 
 # メンバーを削除する
 
+登録を削除する方法  
+削除せずメールを送らないようにするには、Unsubscriped groupに追加のほうがよさそう  
+
+## メンバー情報を取得
+
+```
+curl --request GET \
+  --url https://api.sendgrid.com/v3/contactdb/recipients/search?email=sample@sample.com \
+  --header 'authorization: Bearer (key)' \
+  --data '{}'
+```
+
+recipient_idが取得できる  
+
+## 削除
+
 ```
 $ curl --request DELETE \
   --url https://api.sendgrid.com/v3/contactdb/recipients/(recipient id) \
