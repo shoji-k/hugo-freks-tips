@@ -1,7 +1,9 @@
 +++
 title = "letsencrypt"
-draft = true
+draft = false
 date = "2017-02-14T11:19:01+09:00"
+categories = [ "engineer" ]
+tags = [ "letsencrypt", "ssl" ]
 
 +++
 
