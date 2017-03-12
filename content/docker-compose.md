@@ -106,9 +106,6 @@ docker-compose logs
 implement command  
 docker-compose run (container name) /bin/bash
 
-ex. implement composer install command once  
-docker-compose run --rm (container name) composer install
-
 start containers  
 docker-compose start
 

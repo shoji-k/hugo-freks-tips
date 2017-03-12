@@ -303,12 +303,11 @@ $ docker push shojik/docker-whale
 
 ## implement composer install
 
-use  
-[composer/composer \- Docker Hub](https://hub.docker.com/r/composer/composer/)
+use [composer \- Docker Hub](https://hub.docker.com/_/composer/)
 
-docker pull composer/composer  
+docker pull composer  
 move the directory include composer.json  
-$ docker run --rm -v $(pwd):/app composer/composer install  
+$ docker run --rm -v $(pwd):/app composer install  
 
 # backup mysql data container
 
