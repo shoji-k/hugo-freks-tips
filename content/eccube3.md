@@ -81,4 +81,9 @@ check and update
 
 see [ログ出力設定 \| EC\-CUBE 開発ドキュメント](http://ec-cube.github.io/guideline_log)
 
+#### Formにエラーを表示する
+
+```
+$form->get('form_item')->addError(new FormError('error message'));
+```
 
