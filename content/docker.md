@@ -139,13 +139,15 @@ $ docker run -d --net=my-bridge-network --name db training/postgres
 change the network  
 $ docker network connect my-bridge-network web  
 
-show container volumes
+show container volumes  
 $ docker volume ls
 
 show container dangling volumes  
 this is remained when to delete containers with volume container  
+$ docker volume ls -qf dangling=true  
 
-$ docker volume ls
+clean up dangling volumes  
+$ docker volume rm $(docker volume ls -qf dangling=true)  
 
 back up and restore data  
 $ docker run --rm --volumes-from dbstore -v $(pwd):/backup ubuntu tar cvf /backup/backup.tar /dbdata  
