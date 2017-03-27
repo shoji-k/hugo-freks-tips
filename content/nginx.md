@@ -114,5 +114,23 @@ auth_basic "好きなrealmを";
 auth_basic_ user_file /etc/nginx/.htpasswd;
 ```
 
+#### リバースプロキシ
+
+ip_hashでクライアントIPアドレスを元にセッションが維持される  
+
+```
+upstream backend {
+  ip_hash;
+  server 127.0.0.1:80;
+  server 127.0.0.1:81 ;
+}
+
+# sample
+location ~* \.php$ {
+  proxy_pass http://backend;
+}
+```
+
+
 
 
