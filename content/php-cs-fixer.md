@@ -36,10 +36,10 @@ return Config::create()
 ;
 ```
 
-確認
+確認 .php_cs.dist を使う
 
-$ php-cs-fixer fix ./ --dry-run --diff
+$ php-cs-fixer fix --dry-run --diff
 
-修正
+修正 .php_cs.dist を使う
 
-$ php-cs-fixer fix ./
+$ php-cs-fixer fix
