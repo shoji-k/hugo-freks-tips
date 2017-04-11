@@ -110,6 +110,10 @@ $ gpg --edit-key (key id)
 > passwd  
 > (input old passphrase and new passphrase)  
 
+# revert one file to old commit
+
+$ git checkout [commit hash] [file path]  
+
 
 
 
