@@ -18,3 +18,16 @@ $ cd -
 #### 文字化けしたファイル名を修正する
 
 find . -maxdepth 1 -type f | xargs convmv -f sjis -t utf8
+
+#### 改行コードを変更
+
+インストール  
+$ sudo apt install nkf  
+
+改行コードをlfに変更  
+$ nkf -Lu --overwrite sample.txt  
+
+git diffの結果にだけ対応  
+git管理下のトップディレクトリで実行  
+$ git diff --name-only | xargs nkf -Lu --overwrite  
+
