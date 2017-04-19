@@ -31,3 +31,6 @@ git diffの結果にだけ対応
 git管理下のトップディレクトリで実行  
 $ git diff --name-only | xargs nkf -Lu --overwrite  
 
+#### tarファイルに圧縮
+
+$ tar cvf sample.tar sample
