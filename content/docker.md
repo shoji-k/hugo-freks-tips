@@ -335,6 +335,15 @@ $ docker run -it --net host --pid host --cap-add audit_control \
     docker/docker-bench-security
 ```
 
+## logging
+
+show application logs to use `docker logs`
+
+```
+ln -sf /dev/stdout /var/log/nginx/access.log
+ln -sf /dev/stderr /var/log/nginx/error.log
+```
+
 ## refferences
 
 - [Dockerのライフサイクルを理解するハンズオン資料 - Qiita](http://qiita.com/zembutsu/items/d146295cfcf69c205c1e)
