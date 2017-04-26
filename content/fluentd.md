@@ -140,3 +140,29 @@ $ tail /var/log/td-agent/td-agent.log
 6_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36","forwarder":"-"}
 ```
 
+# use docker
+
+prepare conf  
+localhost:24224(TCP)で受けて標準出力する
+
+```
+<source>
+@type forward
+</source>
+
+<match *>
+@type stdout
+</match>
+```
+
+fluentdコンテナ起動  
+$ docker run -it -p 24224:24224 -v /path/to/conf/test.conf:/fluentd/etc/test.conf -e FLUENTD_CONF=test.conf fluent/fluentd:latest  
+
+コンソール上で起動(Ctrl + Cでストップ)
+
+他のdockerコンテナをfluentdログドライバーで起動  
+$ docker run --log-driver=fluentd your/application
+
+ログがfluentdコンテナを起動したコンソールで表示される
+
+
