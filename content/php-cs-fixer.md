@@ -1,7 +1,9 @@
 +++
-draft = true
-date = "2017-04-07T16:54:27+09:00"
 title = "php cs fixer"
+draft = false
+date = "2017-04-07T16:54:27+09:00"
+categories = [ "engineer" ]
+tags = [ "php" ]
 
 +++
 
