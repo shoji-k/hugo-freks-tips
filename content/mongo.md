@@ -41,7 +41,7 @@ db.createUser({user: "user", pwd: "password", roles:[{ "role": "userAdminAnyData
 
 ## show users
 
-use admin;
+use admin;  
 db.system.users.find();
 
 ## insert data
@@ -59,4 +59,59 @@ db.aaa.find({gender: 'm'});
 ## remove data
 
 db.aaa.find({gender: 'm'});  
+
+# docker
+
+image: [mongo](https://hub.docker.com/_/mongo/)  
+
+docker-compose
+
+```
+version: '2'
+services:
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+    - "27017:27017"
+    volumes:
+    - ./mongo/data:/data/db
+    - ./mongo/init/:/docker-entrypoint-initdb.d/
+    environment:
+    - MONGO_INITDB_DATABASE=fluentd
+```
+
+MONGO_INITDB_DATABASE is the database where initial script creates users.  
+(see /docker-entry.point in the container)  
+
+data is preserved in ./mongo/data  
+
+initialize script is in ./mongo/init  
+
+```
+var newUsers = [
+  {
+		user: 'logger',
+		pwd: 'password',
+		roles: [
+			{
+				role: 'readWrite',
+				db: 'fluentd'
+			}
+		]
+	}
+];
+
+var currentUsers = db.getUsers();
+if (currentUsers.length === newUsers.length) {
+	quit();
+}
+db.dropAllUsers();
+
+for (var i = 0, length = newUsers.length; i < length; ++i) {
+	db.createUser(newUsers[i]);
+}
+```
+
+refference: [fluentd \+ MongoDB でログサーバー構築 \- Qiita](http://qiita.com/janus_wel/items/daf19943837e2562cc9f)  
 
