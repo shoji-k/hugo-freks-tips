@@ -37,3 +37,17 @@ $ sysv-rc-conf apache2 off
 #### repository削除
 
 $ sudo add-apt-repository --remove ppa:sample/xxx
+
+# dpkg
+
+## install
+
+$ dpkg -i xxxx
+
+## list
+
+$ dpkg -l | grep xxx
+
+## uninstall
+
+$ dpkg -r xxx
