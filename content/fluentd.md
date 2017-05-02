@@ -174,4 +174,8 @@ $ docker run --log-driver=fluentd your/application
 
 ログがfluentdコンテナを起動したコンソールで表示される
 
+# with mongo
+
+use fluent-plugin-mongo  
+see https://hub.docker.com/r/fluent/fluentd/ Customize Dockerfile to install plugins (optional)  
 
