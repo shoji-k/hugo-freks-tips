@@ -7,18 +7,102 @@ tags = [ "sakura", "vps", "centos7" ]
 
 +++
 
-[VPS（仮想専用サーバー）｜さくらインターネット ](http://vps.sakura.ad.jp/)
-を契約する
-
-管理画面へログイン、OSをインストールする
-
-- Centos 7 64bit
-- root パスワードを入力
+[VPS（仮想専用サーバー）｜さくらインターネット ](http://vps.sakura.ad.jp/) を契約する
 
 初期設定リファレンス [【さくらのVPS】サーバの初期設定ガイド – さくらのサポート情報](https://help.sakura.ad.jp/hc/ja/articles/206208181)
 
+# ubuntu 16.04
 
-#### ユーザー追加
+sakura用意の標準OSだとufwの設定が動かなかったので断念..  
+カスタマイズのOSを選択  
+
+最初からsudoが使え、ufwも使える  
+
+## firewall
+
+ufwは全て許可になってるので全部閉じる  
+
+$ sudo ufw default deny  
+
+必要なものを許可する  
+
+$ sudo ufw allow ssh
+
+## ssh
+
+ssh用の秘密鍵を生成しておく  
+公開鍵をサーバーへコピー  
+
+```
+$ mkdir .ssh
+$ chmod 700 .ssh
+$ cat id_rsa.pub > .ssh/authorized_keys
+$ chmod 600 .ssh/authorized_keys
+$ rm -f id_rsa.pub
+```
+
+sshサーバーの設定変更
+
+```
+$ sudo vi /etc/ssh/sshd_config
+```
+
+- Port 22
+- PermitRootLogin no
+- PasswordAuthentication no
+- usePAM no
+
+Portはファイアーウォールの設定もあわせて変える
+
+ssh再起動
+
+```
+$ sudo systemctl restart ssh.service
+```
+
+## ntp
+
+ntpdはsystemdがやっている
+
+$ vi /etc/systemd/timesyncd.conf  
+
+```
+NTP=ntp.nict.jp
+```
+
+再起動後有効になる  
+
+確認  
+$ sudo systemctl -l status systemd-timesyncd.service  
+
+## locate
+
+$ sudo apt install language-pack-ja
+
+locale変更  
+$ sudo localectl set-locale LANG=ja_JP.UTF-8 LANGUAGE="en_Us:en"
+
+ファイル名は日本語表示、メッセージは英語  
+
+locale確認  
+$ localectl
+
+## vim
+
+sudo apt-get install software-properties-common
+sudo apt-get install python-dev python-pip python3-dev python3-pip
+
+sudo add-apt-repository ppa:neovim-ppa/stable
+sudo apt update
+sudo apt install neovim
+
+# centos 7
+
+管理画面へログイン、OSをインストールする
+
+- root パスワードを入力
+
+## ユーザー追加
 
 管理画面のコンソールでの作業  
 
@@ -28,7 +112,7 @@ $ passwd user
 (enter password twice)
 ```
 
-#### ユーザーにsudo追加
+## ユーザーにsudo追加
 
 ```
 $ usermod -G wheel user
@@ -36,7 +120,7 @@ $ visudo
 %wheel ALL=(ALL) ALL を有効に
 ```
 
-#### sshログイン
+## sshログイン
 
 ssh用の秘密鍵を生成しておく  
 公開鍵をサーバーへコピー  
@@ -69,7 +153,7 @@ ssh再起動
 $ sudo systemctl restart sshd.service
 ```
 
-#### firewalld設定
+## firewalld設定
 
 デーモン確認
 
@@ -104,25 +188,25 @@ sshログの確認
 journalctl -u sshd.service
 ```
 
-#### centos update
+## centos update
 
 ```
 $ sudo yum update
 ```
 
-#### open http port of firewall
+## open http port of firewall
 
 ```
 $ sudo firewall-cmd --add-service=http --zone=public
 $ sudo firewall-cmd --add-service=https --zone=public
 ```
 
-#### git
+## git
 
 git was already installed  
 so do config  
 
-#### nginx
+## nginx
 
 repository登録  
 $ vim /etc/yum.repos.d/nginx.repo
@@ -137,3 +221,4 @@ enabled=1
 
 install  
 $ sudo yum -y --enablerepo=nginx install nginx
+
