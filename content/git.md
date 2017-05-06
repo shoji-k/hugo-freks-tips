@@ -7,6 +7,12 @@ tags = [ "git" ]
 
 +++
 
+# install
+
+$ sudo add-apt-repository ppa:git-core/ppa  
+$ sudo apt update  
+$ sudo apt install git  
+
 # tips
 
 手元のブランチを削除する  
@@ -113,9 +119,4 @@ $ gpg --edit-key (key id)
 # revert one file to old commit
 
 $ git checkout [commit hash] [file path]  
-
-
-
-
-
 
