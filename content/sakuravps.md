@@ -222,3 +222,23 @@ enabled=1
 install  
 $ sudo yum -y --enablerepo=nginx install nginx
 
+
+# ネットワークが遅い
+
+refference:
+
+- [さくらのVPSで回線速度が遅くアクセスに時間がかかります。 – さくらのサポート情報](https://help.sakura.ad.jp/hc/ja/articles/206073662)
+
+$ sudo ethtool -k ens3 | grep tcp
+
+```
+tcp-segmentation-offload: off
+        tx-tcp-segmentation: off
+        tx-tcp-ecn-segmentation: off
+        tx-tcp6-segmentation: off
+```
+
+再起動して確認する  
+
+試用期間はネットワークが制限される  
+- [お申し込みのながれ｜VPS（仮想専用サーバー）はさくらインターネット](http://vps.sakura.ad.jp/flow/)

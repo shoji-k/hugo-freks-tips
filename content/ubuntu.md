@@ -51,3 +51,33 @@ $ dpkg -l | grep xxx
 ## uninstall
 
 $ dpkg -r xxx
+
+# speedtest
+
+$ sudo easy_install speedtest-cli  
+$ speedtest --list | grep Japan
+
+```
+ 6476) rxy (individual) (Osaka, Japan) [1.83 km]
+ 8832) OMN (Ikeda, Japan) [16.88 km]
+ 6368) gatolabo (Maibara, Japan) [98.72 km]
+11385) buriitto (Suzuka, Japan) [99.54 km]
+ 7976) denpa893 (Hikari, Japan) [338.27 km]
+ 8407) Allied Telesis Capital Corporation (Sagamihara, Japan) [363.95 km]
+```
+
+$ speedtest --server 11385
+
+```
+Retrieving speedtest.net configuration...
+Testing from Sakura Internet (153.126.180.234)...
+Retrieving speedtest.net server list...
+Selecting best server based on ping...
+Hosted by buriitto (Suzuka) [99.54 km]: 57.443 ms
+Testing download speed................................................................................
+Download: 54.21 Mbit/s
+Testing upload speed................................................................................................
+Upload: 4.58 Mbit/s
+```
+
+
