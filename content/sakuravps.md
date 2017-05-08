@@ -3,7 +3,7 @@ title = "sakura vps"
 draft = false
 date = "2017-02-04T14:58:30+09:00"
 categories = [ "engineer" ]
-tags = [ "sakura", "vps", "centos7" ]
+tags = [ "sakura", "vps", "centos7", "ubuntu" ]
 
 +++
 
@@ -21,12 +21,20 @@ sakura用意の標準OSだとufwの設定が動かなかったので断念..
 ## firewall
 
 ufwは全て許可になってるので全部閉じる  
-
 $ sudo ufw default deny  
 
 必要なものを許可する  
+$ sudo ufw allow ssh  
 
-$ sudo ufw allow ssh
+対応したアプリを表示  
+$ sudo ufw app list  
+
+設定を確認  
+numberedで番号も表示  
+$ sudo ufw status numbered  
+
+設定を削除  
+$ sudo ufw delete (number)  
 
 ## ssh
 
