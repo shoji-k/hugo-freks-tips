@@ -80,4 +80,20 @@ Testing upload speed............................................................
 Upload: 4.58 Mbit/s
 ```
 
+# needed software
 
+clipboard  
+$ sudo apt install xsel  
+
+tig  
+$ sudo apt install tig  
+
+mosh--
+$ sudo apt install mosh  
+$ sudo ufw allow mosh  
+
+tree  
+$ sudo apt install tree  
+
+ctags  
+$ sudo apt install exuberant-ctags  
