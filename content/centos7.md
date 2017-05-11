@@ -7,13 +7,27 @@ tags = [ "centos7" ]
 
 +++
 
-#### centos update
+# centos update
 
 ```
 $ sudo yum update
 ```
 
-#### firewalld
+# firewalld
+
+confirm firewall setting  
+
+```
+firewall-cmd --list-services --zone=public  --permanent  
+```
+
+change ssh port
+
+```
+cp /usr/lib/firewalld/services/ssh.xml /etc/firewalld/services/
+vi /etc/firewalld/services/ssh.xml
+firewall-cmd --reload
+```
 
 reload firewalld  
 
@@ -35,7 +49,7 @@ $ sudo firewall-cmd --add-port=30080/tcp --zone=public --permanent
 $ sudo firewall-cmd --remove-port=30080/tcp --zone=public --permanent
 ```
 
-#### yum
+# yum
 
 yum install時に使われるrepositoryは`/etc/yum.repos.d/`内にあって、enable=1のもの  
 `enable=0`のものを指定するには
@@ -62,13 +76,13 @@ sudo yum install certbot
 sudo yum remove certbot
 ```
 
-#### rpm
+# rpm
 
-##### install
+## install
 
 $ rpm -ivh sample.rpm
 
-#### show places
+# show places
 
 $ rpm -ql sample
 
