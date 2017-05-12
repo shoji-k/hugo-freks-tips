@@ -1,7 +1,9 @@
 +++
-draft = true
 title = "infrastructure test"
+draft = false
 date = "2017-02-05T16:25:08+09:00"
+categories = [ "engineer" ]
+tags = [ "infrastructure", "test" ]
 
 +++
 
@@ -58,7 +60,7 @@ result 2
 
 ```
 Server Software:        nginx
-Server Hostname:        www8111ue.sakura.ne.jp
+Server Hostname:        sample.com
 Server Port:            80
 
 Document Path:          /

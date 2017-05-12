@@ -1,7 +1,9 @@
 +++
 title = "awscli"
-draft = true
+draft = false
 date = "2017-05-11T15:18:08+09:00"
+categories = [ "engineer" ]
+tags = [ "aws" ]
 
 +++
 

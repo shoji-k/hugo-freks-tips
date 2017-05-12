@@ -1,7 +1,9 @@
 +++
 title = "neovim"
-draft = true
+draft = false
 date = "2017-05-08T09:49:39+09:00"
+categories = [ "engineer" ]
+tags = [ "neovim", "vim" ]
 
 +++
 
