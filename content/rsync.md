@@ -10,3 +10,12 @@ tags = [ "aws", "ecr" ]
 # backup remote files
 
 $ rsync --exclude="/src/app/cache" --exclude=".git" --exclude=".gitignore" -rltuvz sample:/var/www/html ./
+
+-r recursive  
+-l copy symlinks  
+-t preserve modification time  
+-u skip file that are newer  
+-v verbose  
+-z compress  
+
+
