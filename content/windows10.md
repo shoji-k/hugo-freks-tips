@@ -41,15 +41,19 @@ tags = [ "windows" ]
 - Franz
   - other inboxes
   - TweetDeck
-- Chatwork
-- Slack
-- Messenger
-- BoW
-  - ssh config
-  - mosh
-  - git
+  - Chatwork
+  - Slack(main account)
+  - Messenger
+- Slack(temporary account)
 - VS Code
 - Sublime Text
+- BoW
+
+## Bash on Windows
+
+- ssh client setting
+- mosh
+- nvim
 
 ## windows store
 
