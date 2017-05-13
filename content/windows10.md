@@ -51,6 +51,7 @@ tags = [ "windows" ]
 
 ## Bash on Windows
 
+- upgrade git, setting
 - ssh client setting
 - mosh
 - nvim
