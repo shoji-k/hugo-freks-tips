@@ -97,3 +97,17 @@ $ sudo apt install tree
 
 ctags  
 $ sudo apt install exuberant-ctags  
+
+# terminal color
+
+## show terminal color
+
+$ dircolors -p  
+
+## change terminal color
+
+$ dircolors -p > ~/.dircolors
+
+and change ~/.dircolors  
+and reload .bashrc  
+
