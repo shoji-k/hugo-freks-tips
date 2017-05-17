@@ -55,6 +55,7 @@ tags = [ "windows" ]
 - ssh client setting
 - mosh
 - nvim
+- tig
 
 ## windows store
 
@@ -72,10 +73,11 @@ tags = [ "windows" ]
 
 # ショートカット
 
-Windows + ←→ ウィンドウを半分にする  
+Windows + ←→→ ウィンドウを半分にする  
 Windows + CTRL + D 新しいデスクトップを作成  
 Windows + CTRL + ←→  デスクトップを切り替え  
 Windows + CTRL + F4  デスクトップを削除  
+Windows + SHIFT + S スクリーンショットがクリップオードに、ペーストできる
 
 # タッチパッド
 
