@@ -4,3 +4,4 @@ title = "freks tips"
 relativeURLS = true
 canonifyurls = true
 paginate=100
+googleAnalytics = "UA-56127730-2"

@@ -102,3 +102,11 @@ paginate = 100
 ```
 
 [Hugo \- Pagination](https://gohugo.io/extras/pagination/)
+
+# テーマの一部を上書きする
+
+themesディレクトリにテーマがあり、同じ構成のディレクトリ、ファイルを用意すると上書きされる  
+li.htmlを上書きするなら  
+$ cp themes/hugo_theme_robust/layouts/_default/li.html layouts/_default/li.html  
+で編集する  
+
