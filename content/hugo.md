@@ -1,11 +1,13 @@
 +++
-title = "start hugo"
+title = "hugo"
 draft = false
 date = "2016-11-21T10:49:54+09:00"
 categories = [ "engineer" ]
 tags = [ "hugo" ]
 
 +++
+
+# start hugo
 
 最新リリースをダウンロード  
 [Releases · spf13/hugo](https://github.com/spf13/hugo/releases)
@@ -58,7 +60,7 @@ $ hugo undraft content/post/good-to-great.md
 publicディレクトリにアウトプット  
 $ hugo --theme=robust
 
-#### tableタグにclassを追加する
+## tableタグにclassを追加する
 
 hugo-robust-themeの場合  
 $ vim layouts/_default/summary.html
@@ -77,7 +79,7 @@ after
 
 see [Support for Kramdown/Maruku attribute lists in markdown files · Issue \#1585 · spf13/hugo](https://github.com/spf13/hugo/issues/1585)
 
-#### baseUrlにサブディレクトリを使う
+## baseUrlにサブディレクトリを使う
 
 サブディレクトリがあると、ページャーのリンクがうまく動かない  
 e.g. 次へをクリックするとlocalhost/sub/pages/2へ遷移せず、localhost/pages/2へ遷移する  
@@ -91,3 +93,12 @@ canonifyurls = true
 
 を追加で解決
 
+## paginationの数を変える
+
+$ vim config.toml
+
+```
+paginate = 100
+```
+
+[Hugo \- Pagination](https://gohugo.io/extras/pagination/)
