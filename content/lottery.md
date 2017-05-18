@@ -3,7 +3,7 @@ title = "lottery"
 draft = false
 date = "2016-12-12T15:38:46+09:00"
 categories = [ "memo" ]
-tags = [ "" ]
+tags = [ "lottery" ]
 
 +++
 
