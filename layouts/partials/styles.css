@@ -635,3 +635,6 @@ section.footer > header a {
 {{ end }}
 {{ end }}
 
+.terms a.wishlist {
+  background-color: rgb(24, 188, 156);
+}

@@ -1,0 +1,36 @@
+<aside class="l-sidebar">
+
+  <div class="sections sidebar">
+    <section class="sidebar">
+      <header>LATESTS</header>
+      <div>
+        <div class="articles sm">
+          {{ range $i, $p := (first 10 .Site.Pages) }}
+          {{ .Render "li_sm" }}
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+    <section class="sidebar">
+      <header>SPONSOR</header>
+      <div>
+        <ul class="terms">
+          <li><a class="wishlist" href="http://amzn.asia/8CF4cAC">wish list</a></li>
+        </ul>
+      </div>
+    </section>
+
+    {{ range $key, $value := .Site.Taxonomies }}
+    <section class="sidebar">
+      <header>{{ $key | upper }}</header>
+      <div>
+        <ul class="terms">
+          {{ range first 10 $value.ByCount }}<li><a href="{{ $.Site.BaseURL}}{{ $key }}/{{ .Name | urlize }}">{{ .Name }}</a></li>{{ end }}
+        </ul>
+      </div>
+    </section>
+    {{ end }}
+  </div>
+
+</aside>
