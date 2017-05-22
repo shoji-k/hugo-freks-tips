@@ -66,3 +66,9 @@ l listenしてるもののみ
 p プログラム名を表示
 ```
 
+# cron
+
+## 全ユーザーのcrontab
+
+/var/spool/cron  
+を参照する

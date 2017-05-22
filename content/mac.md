@@ -11,6 +11,9 @@ tags = [ "mac" ]
 
 [Mac をはじめてお使いになる方 \- Apple サポート 公式サイト](https://support.apple.com/ja-jp/explore/new-to-mac)
 
+## Spotlightの軌道の仕方
+
+Control + space  
 
 ## terminalの起動の仕方
 
@@ -39,3 +42,17 @@ sudo find / -iname *.app
 
 Command + SHIFT + A アプリケーションフォルダ表示  
 Command + SHIFT + G フォルダ移動ウィンドウ表示  
+
+## アプリケーション
+
+インストールはMac App Storeから入れる  
+左上アップルマーク > Mac App Store
+
+# check
+
+- あやしいApplication
+- ps aux であやしいプロセス
+- netstat であやしい待ち受け
+- あやしいcrontab
+- Safari > 拡張機能
+- Chrome > 拡張機能
