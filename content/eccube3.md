@@ -7,15 +7,18 @@ tags = [ "php", "eccube3" ]
 
 +++
 
-#### debug mode
+# debug mode
 
 デバッグモード用のURLが用意されている  
 index_dev.phpを入れるとデバッグモード  
 http://localhost/index_dev.php/sample/aaa
 
-#### plugin
+# plugin
 
 Customizeプラグインを作る場合
+
+generate command  
+$ php app/console plugin:develop generate
 
 ```
 Customize/
@@ -60,7 +63,7 @@ event.ymlとつなぐmethodを用意
 
 コントローラーを設置  
 
-#### clear cache
+# clear cache
 
 キャッシュファイル削除  
 $ php app/console cache:clear
@@ -68,7 +71,7 @@ $ php app/console cache:clear
 セッション情報も含めて削除  
 $ php app/console cache:clear --all
 
-#### doctrine
+# doctrine
 
 check and update  
 
@@ -77,11 +80,11 @@ check and update
 ./vendor/bin/doctrine orm:schema-tool:update --force
 ```
 
-#### log
+# log
 
 see [ログ出力設定 \| EC\-CUBE 開発ドキュメント](http://ec-cube.github.io/guideline_log)
 
-#### Formにエラーを表示する
+# Formにエラーを表示する
 
 ```
 $form->get('form_item')->addError(new FormError('error message'));
