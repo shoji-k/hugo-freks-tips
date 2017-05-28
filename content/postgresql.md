@@ -25,3 +25,22 @@ $ pg_dump -H hostname -d databasename -U user > backup.sql
 # restore
 
 $ psql -U user database < backup.sql  
+
+# sequence作成
+
+```
+CREATE SEQUENCE sample
+START WITH 26
+INCREMENT BY 1
+NO MINVALUE
+NO MAXVALUE
+CACHE 1;
+```
+# sequenceのidをセット
+
+id=5までは登録済みとする  
+次からは6
+
+```
+SELECT pg_catalog.setval('sample', 5, true);
+```
