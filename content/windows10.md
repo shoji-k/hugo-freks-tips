@@ -48,6 +48,7 @@ tags = [ "windows" ]
 - VS Code
 - Sublime Text
 - BoW
+- cmder [Bash on Windows \+ cmderでまともなターミナルを獲得する\(tmuxに関する追記有り\) \- Qiita](http://qiita.com/yutaszk/items/fb77435296b131fd0a3a)
 
 ## Bash on Windows
 
@@ -61,6 +62,7 @@ tags = [ "windows" ]
 
 - line
 - facebook
+- OneNote (default installed)
 
 ## Control Panel
 
