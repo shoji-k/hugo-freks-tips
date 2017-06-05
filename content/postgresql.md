@@ -20,7 +20,8 @@ tags = [ "postgres" ]
 
 # backup
 
-$ pg_dump -H hostname -d databasename -U user > backup.sql  
+$ pg_dump -h hostname -d databasename -U user > backup.dbbackup  
+$ pg_dump -h hostname -d databasename -U user --inserts > backup.sql  
 
 # restore
 
