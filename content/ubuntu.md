@@ -111,3 +111,7 @@ $ dircolors -p > ~/.dircolors
 and change ~/.dircolors  
 and reload .bashrc  
 
+# check to restart
+
+$ sudo apt install debian-goodies
+$ sudo checkrestart -a
