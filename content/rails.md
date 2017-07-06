@@ -51,4 +51,21 @@ $ docker run -p 3000:30000 -v "$PWD":/usr/src/app -w /usr/src/app myruby rails s
 
 画面にアクセスできる  
 
+## var_dump(); exit; 的な
 
+raise foobar.inspect
+
+# migration
+
+## カラムを追加する
+
+Userテーブルにcontent:stringのカラムを追加する  
+$ rails generate migration AddColumnToUser content:string
+
+## 作ったmigrationを削除する
+
+$ rails destroy migration (class name)
+
+## migrationを適用する
+
+$ rails db:migrate
