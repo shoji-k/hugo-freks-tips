@@ -50,6 +50,17 @@ tags = [ "windows" ]
 - BoW
 - cmder [Bash on Windows \+ cmderでまともなターミナルを獲得する\(tmuxに関する追記有り\) \- Qiita](http://qiita.com/yutaszk/items/fb77435296b131fd0a3a)
 
+## install php
+
+$ sudo apt-get install software-properties-common python-software-properties  
+$ sudo add-apt-repository ppa:ondrej/php  
+$ sudo apt update  
+$ sudo apt install php7.1  
+
+### php server
+
+$ sudo php -S localhost:80 index.php
+
 ## Bash on Windows
 
 - upgrade git, setting
