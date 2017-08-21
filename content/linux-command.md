@@ -72,3 +72,11 @@ p プログラム名を表示
 
 /var/spool/cron  
 を参照する
+
+# grepの前後行を表示
+
+$ grep -A 5 sample sample.log  
+後５行を表示
+
+$ grep -B 5 sample sample.log  
+前５行を表示
