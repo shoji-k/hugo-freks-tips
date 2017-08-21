@@ -86,4 +86,9 @@ $ rpm -ivh sample.rpm
 
 $ rpm -ql sample
 
+# initial setting
 
+$ useradd user  
+$ passwd user  
+(enter password)  
+$ usermod -G wheel user  
