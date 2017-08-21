@@ -69,3 +69,59 @@ $ rails destroy migration (class name)
 ## migrationを適用する
 
 $ rails db:migrate
+
+# rails command
+
+controllerのgenerateとdestroy
+
+```
+$ rails generate controller StaticPages home help
+$ rails destroy  controller StaticPages home help
+```
+
+modelのgenerateとdestroy
+
+```
+$ rails generate model User name:string email:string
+$ rails destroy model User
+```
+
+database migrate
+
+```
+$ rails db:migrate
+$ rails db:rollback
+```
+
+database reset
+
+```
+$ rails db:migrate:reset
+```
+
+db seed  
+db/seed.rbを動かす
+
+```
+$ rails db:seed
+```
+
+# dbを変更しないrails console
+
+```
+rails console --sandbox
+```
+
+# production用コマンド
+
+```
+rails server --environment production
+rails db:migrate RAILS_ENV=production
+```
+
+# byebug gem
+
+debuggerをコード内に挿入  
+rails s の場所でデバッグができる  
+Ctrl + D で抜ける  
+
