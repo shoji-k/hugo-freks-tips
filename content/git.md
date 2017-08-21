@@ -15,6 +15,16 @@ $ sudo apt install git
 
 # tips
 
+## checkout tag
+
+$ git checkout -b branch-name tags/<tag-name>  
+
+## checkout remote branch
+
+$ git checkout -b local-branch-name origin/remote-branch-name  
+
+## delete branch
+
 手元のブランチを削除する  
 $ git branch -d (sample)  
 
@@ -120,3 +130,15 @@ $ gpg --edit-key (key id)
 
 $ git checkout [commit hash] [file path]  
 
+# fix conflict
+
+## 片方の変更だけ適用する
+
+元のブランチを採用  
+$ git checkout --ours file
+
+マージするブランチを採用  
+$ git checkout --theirs file
+
+$ git add file  
+$ git comit  
