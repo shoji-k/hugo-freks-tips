@@ -25,3 +25,12 @@ sudo apt-get install -y nodejs
 npmもインストールされる  
 
 
+# use docker
+
+## npm install
+
+$ docker run --rm -i -v $(pwd):/src mkenney/npm npm install  
+
+## gulp
+
+$ docker run --rm -i -v $(pwd):/src mkenney/npm gulp  
