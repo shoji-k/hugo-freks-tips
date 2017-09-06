@@ -115,3 +115,13 @@ and reload .bashrc
 
 $ sudo apt install debian-goodies
 $ sudo checkrestart -a
+
+# tool
+
+## pdftohtml
+
+install  
+$ sudo apt install poppler-utils  
+
+show pdf in terminal  
+$ pdftohtml sample.pdf -stdout  
