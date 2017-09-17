@@ -48,7 +48,30 @@ tags = [ "windows" ]
 - VS Code
 - Sublime Text
 - BoW
-- cmder [Bash on Windows \+ cmderでまともなターミナルを獲得する\(tmuxに関する追記有り\) \- Qiita](http://qiita.com/yutaszk/items/fb77435296b131fd0a3a)
+
+### cmder
+
+[Bash on Windows \+ cmderでまともなターミナルを獲得する\(tmuxに関する追記有り\) \- Qiita](http://qiita.com/yutaszk/items/fb77435296b131fd0a3a)  
+
+vimやtigで画面横分割した際に、マルチバイトが崩れる (2017-09-18 現在)
+
+### mintty
+
+bash on windows 用のインストーラー  
+[mintty/wsltty: Mintty as a terminal for Bash on Ubuntu on Windows / WSL](https://github.com/mintty/wsltty)  
+
+[Bash on Ubuntu on Windows で快適日本語ターミナル \- Qiita](http://qiita.com/alt-core/items/3eff6308fde7d2a28bdc)  
+をベースに  
+
+[4bit\. Terminal Color Scheme Designer](http://ciembor.github.io/4bit/)
+でカラースキーマを用意
+
+$ vim ~/.minttyrc  
+に貼り付け
+
+ディレクトリの色が見づらい分を調整  
+$ dircolors -p > ~/.dircolors
+$ vim ~/.dircolors
 
 ## install php
 
