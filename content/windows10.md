@@ -66,8 +66,9 @@ bash on windows 用のインストーラー
 [4bit\. Terminal Color Scheme Designer](http://ciembor.github.io/4bit/)
 でカラースキーマを用意
 
-$ vim ~/.minttyrc  
-に貼り付け
+.minttyrcがみつからなかったが  
+AppData\Roaming\wsltty\themes\color  
+にファイルを用意して、設定画面からthemeを選ぶと適用された  
 
 ディレクトリの色が見づらい分を調整  
 $ dircolors -p > ~/.dircolors
