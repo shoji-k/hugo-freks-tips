@@ -75,4 +75,13 @@ SA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE
 
 $ sudo systemctl reload nginx.service
 
+# get another domain certificate
+
+do it again  
+$ sudo certbot certonly --webroot -w /usr/share/nginx/html -d sample.com  
+
+# show certificates
+
+$ sudo certbot ceriticates  
+see: certbot -h  
 
