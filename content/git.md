@@ -13,6 +13,17 @@ $ sudo add-apt-repository ppa:git-core/ppa
 $ sudo apt update  
 $ sudo apt install git  
 
+## connect to github tip by original key name
+
+$ vim ~/.ssh/config
+
+```
+Host github.com
+  Hostname github.com
+  User git
+  IdentityFile ~/.ssh/githubkey
+```
+
 # tips
 
 ## checkout tag
