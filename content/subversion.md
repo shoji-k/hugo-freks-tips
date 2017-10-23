@@ -7,6 +7,13 @@ tags = [ "subversion" ]
 
 +++
 
+# install
+
+xenial  
+$ sudo apt install subversion
+
+# commands
+
 svn checkout http://(リポジトリ）  
 チェックアウトしてファイルをダウンロード  
 
