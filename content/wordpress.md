@@ -1,6 +1,6 @@
 +++
 date = "2017-10-23T20:42:25+09:00"
-draft = true
+draft = false
 title = "wordpress"
 categories = [ "engineer" ]
 tags = [ "wordpress" ]

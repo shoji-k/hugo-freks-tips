@@ -1,7 +1,9 @@
 +++
 date = "2017-10-23T19:21:24+09:00"
-draft = true
+draft = false
 title = "php codesniffer"
+categories = [ "engineer" ]
+tags = [ "php" ]
 
 +++
 
