@@ -23,3 +23,9 @@ see other plugins or guidelines
 ## to check
 
 - PHP CodeSniffer
+
+# wp cli
+
+## install
+
+https://make.wordpress.org/cli/handbook/installing/  
