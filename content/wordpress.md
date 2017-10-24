@@ -29,3 +29,16 @@ see other plugins or guidelines
 ## install
 
 https://make.wordpress.org/cli/handbook/installing/  
+
+## scaffold plugin
+
+$ wp scaffold plugin --allow-root (plugin name)  
+
+# phpunit install
+
+php 5.7  
+$ docker run --rm -v $(pwd):/app composer require --dev phpunit/phpunit ^5.7
+
+php 7  
+$ docker run --rm -v $(pwd):/app composer require --dev phpunit/phpunit ^6.2
+
