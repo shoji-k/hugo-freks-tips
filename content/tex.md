@@ -10,18 +10,24 @@ tags = [ "aws", "ecr" ]
 # install
 
 see https://user.ecc.u-tokyo.ac.jp/users/user-15826/wiki/?TeX/Install  
+see http://xartaky.hatenablog.jp/entry/2016-12-27-texlive-on-ubuntu  
 
 不要なものをけす  
 apt purge texlive*  
 
 download install files  
 cd library/install-tl-20171024/  
-./install-tl  
+./install-tl --repository http://mirror.ctan.org/systems/texlive/tlnet/  
 ( I を入力)  
 
 パスを通す  
 PATH=$PATH:/usr/local/texlive/2017/bin/x86_64-linux  
 export PATH  
+
+# update
+
+$ sudo tlmgr option repository http://mirror.ctan.org/systems/texlive/tlnet  
+$ sudo tlmgr update --self --all  
 
 # packages
 
