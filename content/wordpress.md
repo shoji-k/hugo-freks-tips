@@ -42,3 +42,14 @@ $ docker run --rm -v $(pwd):/app composer require --dev phpunit/phpunit ^5.7
 php 7  
 $ docker run --rm -v $(pwd):/app composer require --dev phpunit/phpunit ^6.2
 
+## test db for a plugin
+
+implement script on a database server.  
+
+this needs curl (or wget), subversion  
+apt intall curl subversion  
+
+$ bash ./bin/install-wp-tests.sh wordpress_test (user id) (user password) (server host) latest true  
+lastest = wordpress version  
+last true = skip database creation  
+
