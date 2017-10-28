@@ -32,6 +32,8 @@ View: Articles/index.ctp
 
 # bake
 
+bin/cake bake all users  
+or  
 bin/cake bake model users  
 bin/cake bake controller users  
 bin/cake bake template users  
