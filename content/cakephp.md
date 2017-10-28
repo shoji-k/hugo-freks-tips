@@ -7,6 +7,37 @@ tags = [ "php", "cakephp" ]
 
 +++
 
+# install
+
+## generate code
+
+docker run composer だとintlがないからインストールに失敗するため  
+composer.pharをダウンロード  
+
+$ php composer.phar create-project --prefer-dist cakephp/app cms  
+
+## set up database
+
+change host, database name, etc...  
+$ vim config/app.php  
+
+insert sql by hand.  
+
+# rule
+
+Entity: Article  
+Table: ArticlesTable  
+Class: ArticlesController  
+View: Articles/index.ctp  
+
+# bake
+
+bin/cake bake model users  
+bin/cake bake controller users  
+bin/cake bake template users  
+
+# tips
+
 モデルのデータベースアクセスをSQLで確認する
 
 ```
