@@ -29,6 +29,9 @@ svn delete (file)
 svn commit -m 'コメント'  
 コメントをつけてコミットします（リポジトリに送り込む）  
 
+svn commit -m 'コメント' file1 file2 directory  
+指定したファイル(ディレクトリ)をコミットします（リポジトリに送り込む）  
+
 svn info  
 リポジトリの情報を表示  
 
