@@ -40,3 +40,10 @@ svn diff
 
 svn diff -r r30:head  
 リビジョンr33からheadまでの差分を表示（リビジョンはsvn infoで見れる）  
+
+# redmine
+
+チケットと紐付ける  
+svn commit -m 'hoo bar baz refs #nnn'  
+svn commit -m 'hoo bar baz fixes #nnn'  
+
