@@ -7,6 +7,12 @@ tags = [ "php", "eccube3" ]
 
 +++
 
+# reference
+
+[EC\-CUBE プラグインチュートリアル \| EC\-CUBE 開発ドキュメント](http://doc.ec-cube.net/plugin_tutorial)  
+[Symfony2 ドキュメントポータル](http://docs.symfony.gr.jp/)  
+[Welcome to Doctrine 2 ORM’s documentation\! — Doctrine 2 ORM 2 documentation](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/)  
+
 # debug mode
 
 デバッグモード用のURLが用意されている  
@@ -71,12 +77,25 @@ $ php app/console cache:clear
 セッション情報も含めて削除  
 $ php app/console cache:clear --all
 
+# plugin cli
+
+$ php app/console plugin:develop install --code CategoryContent  
+$ php app/console plugin:develop enable --code CategoryContent  
+
 # doctrine
 
-check and update  
+Resource/doctrine/xxxx  
+を変更したら  
+
+check--
 
 ```
 ./vendor/bin/doctrine orm:schema-tool:update --dump-sql
+```
+
+update  
+
+```
 ./vendor/bin/doctrine orm:schema-tool:update --force
 ```
 
