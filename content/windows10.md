@@ -48,6 +48,7 @@ tags = [ "windows" ]
 - VS Code
 - Sublime Text
 - BoW
+- Google Drive File Stream [ドライブ ファイル ストリームを導入する \- G Suite 管理者 ヘルプ](https://support.google.com/a/answer/7491144)
 
 ### cmder
 
