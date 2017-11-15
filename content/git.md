@@ -153,3 +153,9 @@ $ git checkout --theirs file
 
 $ git add file  
 $ git comit  
+
+# useful
+
+## コメントの変更を無視したdiff
+
+http://tmtms.hatenablog.com/entry/2017/11/14/git-diff-ignore-comment  
