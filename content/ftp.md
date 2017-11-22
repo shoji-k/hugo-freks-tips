@@ -21,6 +21,16 @@ password: (input)
 
 ## ncftp
 
+### ログインして作業
+
+$ ncftp -u (user) -p (password) (remote host name)  
+
+ディレクトリを再帰的にアップロード  
+cd, lcdでディレクトリの位置を合わせて  
+$ mput -R (directory)  
+
+### 直接アップロード
+
 ディレクトリを再帰的にアップロードする場合  
 
 $ ncftpput -u (user) -p (password) -P (port) -R -m -z (remote host name) (remote directory) (local directory)  
