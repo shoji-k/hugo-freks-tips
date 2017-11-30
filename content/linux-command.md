@@ -90,3 +90,12 @@ cpより早い
 ```
 rsync -avh dir1 dir2  
 ```
+
+# mount
+
+## hdd
+
+fdisk -l  
+で確認  
+
+mount /dev/sdb1 /hdd_somewhere
