@@ -80,3 +80,13 @@ $ grep -A 5 sample sample.log
 
 $ grep -B 5 sample sample.log  
 前５行を表示
+
+# rsync
+
+## 手元のファイルをコピー
+
+cpより早い  
+
+```
+rsync -avh dir1 dir2  
+```
