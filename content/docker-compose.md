@@ -86,6 +86,19 @@ environment:
 set container name  
 container_name: web_app
 
+# docker-compose.yml v.3
+
+```
+services:
+  node:
+    volumes:
+      - node_modules:/app/node_modules
+
+volumes:
+  node_modules:
+    driver: local
+```
+
 ## commands
 
 create and boot containers  
