@@ -86,7 +86,7 @@ environment:
 set container name  
 container_name: web_app
 
-# docker-compose.yml v.3
+example on [https://gist\.githubusercontent\.com/r7kamura/bce688ca3a50aad304b21fcb2b19b48f/raw/f0bcbc6015e01ac8eddf9b58020bce5777bcb1c8/docker\-compose\.yml](https://gist.githubusercontent.com/r7kamura/bce688ca3a50aad304b21fcb2b19b48f/raw/f0bcbc6015e01ac8eddf9b58020bce5777bcb1c8/docker-compose.yml)
 
 ```
 services:
