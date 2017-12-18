@@ -21,3 +21,19 @@ $ cd myapp
 $ yarn start
 ```
 
+## docker
+
+```
+$ docker run --name reactjs -it -v $(pwd):/app -p 13000:3000 node /bin/bash
+$ npm install -g create-react-app
+$ create-react-app myapp
+$ cd myapp
+$ yarn start
+```
+
+then access localhost:13000  
+
+
+
+
+
