@@ -71,3 +71,8 @@ $ ../../../vendor/bin/phpunit
 
 if you failed, remove /tmp/*  
 
+test reference  
+- [PHPUnit – Make WordPress Core](https://make.wordpress.org/core/handbook/testing/automated-testing/phpunit/)
+- [Automated Testing in WordPress, Really?\!](https://www.slideshare.net/ptahdunbar/automated-testing-in-wordpress-really)
+- [Introduction To WordPress Unit Testing \| Tom McFarlin](https://tommcfarlin.com/wordpress-unit-testing/)
+- [unit testing \| WordPress\.tv](https://wordpress.tv/tag/unit-testing/)
