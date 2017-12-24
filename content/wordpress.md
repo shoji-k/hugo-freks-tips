@@ -76,3 +76,13 @@ test reference
 - [Automated Testing in WordPress, Really?\!](https://www.slideshare.net/ptahdunbar/automated-testing-in-wordpress-really)
 - [Introduction To WordPress Unit Testing \| Tom McFarlin](https://tommcfarlin.com/wordpress-unit-testing/)
 - [unit testing \| WordPress\.tv](https://wordpress.tv/tag/unit-testing/)
+
+# register plugin to wordpress.org
+
+reference: [プラグインの作成 \- WordPress Codex 日本語版](https://wpdocs.osdn.jp/%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%81%AE%E4%BD%9C%E6%88%90)
+
+- wordpress.orgにアカウントを作る
+- readme.txtを用意
+- プラグインバナーを用意
+- スクリーンショットを登録もできる
+- svnでコミットする
