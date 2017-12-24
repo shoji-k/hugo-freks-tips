@@ -159,3 +159,11 @@ $ git comit
 ## コメントの変更を無視したdiff
 
 http://tmtms.hatenablog.com/entry/2017/11/14/git-diff-ignore-comment  
+
+# submodule
+
+$ git submodule add https://github.com/twbs/bootstrap.git bootstrap
+
+submoduleのディレクトリ内は、submoduleのリポジトリを参照する  
+外側に出ると外側のリポジトリ  
+
