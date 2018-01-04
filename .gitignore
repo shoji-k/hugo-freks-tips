@@ -1,4 +1,4 @@
 /public/
 deploy.sh
-dev.sh
+serve_dev.sh
 
