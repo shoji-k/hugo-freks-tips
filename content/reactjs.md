@@ -19,6 +19,12 @@ tags = [ "react.js" ]
 const squares = this.state.squares.slice();
 ```
 
+## copy object
+
+```
+var newPlayer = Object.assign({}, player, {score: 2});
+```
+
 # creating a new app
 
 react.js version: v.16.0.0  
