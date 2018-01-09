@@ -11,6 +11,14 @@ tags = [ "react.js" ]
 
 [reactjs tutorial](https://reactjs.org/tutorial/tutorial.html)
 
+# tips
+
+## copy array
+
+```
+const squares = this.state.squares.slice();
+```
+
 # creating a new app
 
 react.js version: v.16.0.0  
