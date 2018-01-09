@@ -25,6 +25,36 @@ const squares = this.state.squares.slice();
 var newPlayer = Object.assign({}, player, {score: 2});
 ```
 
+## Functional Components
+
+propを受けてrenderするだけのClassはFunctionに変えられる
+
+```
+class Square extends React.Component {
+  render() {
+    return (
+      <button className="square" onClick={() => this.props.onClick()}>
+        {this.props.value}
+      </button>
+    );
+  }
+}
+```
+
+が
+
+```
+function Square(props) {
+  return (
+    <button className="square" onClick={props.onClick}>
+      {props.value}
+    </button>
+  );
+}
+```
+
+となる
+
 # creating a new app
 
 react.js version: v.16.0.0  
