@@ -156,6 +156,7 @@ export default todoApp
 Reduxではstateは必ず一つ  
 
 役割  
+
 - stateを保持する
 - stateへアクセスするためのgetState()を提供する
 - stateを更新するためのdispatch(action)を提供する
