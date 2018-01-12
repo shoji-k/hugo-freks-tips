@@ -89,3 +89,27 @@ $ pandoc -f markdown -t html5 sample.md -s -o result.html
 
 $ pandoc -f markdown -t html5 --variable abstract="I'm an abstract" sample.md -s -o result.html  
 
+# command
+
+$ pandoc -f (input format) -t (output format) -o (output filename) (input file)  
+
+-o がなければ標準出力  
+
+input format, output format  
+http://sky-y.github.io/site-pandoc-jp/users-guide/#general-options  
+
+## tex to html
+
+$ pandoc sample.tex -f latex -t html5 -o sample.html  
+
+-s をつけると部分変換でなくて完全なtexファイルの変換  
+
+htmlの中でのmath表示オプション  
+http://sky-y.github.io/site-pandoc-jp/users-guide/#math-rendering-in-html  
+
+e.g.  
+$ pandoc sample.tex -o sample.html --mathjax -t html5  
+
+## html to tex
+
+$ pandoc sample.html -f html5 -t latex -o sample.tex  
