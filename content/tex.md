@@ -3,7 +3,7 @@ date = "2017-10-26T18:05:42+09:00"
 draft = false
 title = "tex"
 categories = [ "engineer" ]
-tags = [ "aws", "ecr" ]
+tags = [ "tex" ]
 
 +++
 
@@ -49,5 +49,10 @@ $HOME/.texmf/
 
 see https://tex.stackexchange.com/questions/96976/install-custom-cls-using-tex-live-in-local-directory  
 see https://tex.stackexchange.com/questions/8357/how-to-have-local-package-override-default-package  
+
+# texとは
+
+texはdvi(device independent)ファイルを出力する  
+dviファイルがソフトなどで読み込まれ表示される  
 
 
