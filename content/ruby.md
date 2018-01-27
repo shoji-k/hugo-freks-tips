@@ -23,7 +23,7 @@ title = "ruby"
 # Symbol
 ```
 
-## hash argument
+### Hash
 
 最後の引数がハッシュであればハッシュリテラルの{}を省略できる  
 
@@ -34,3 +34,12 @@ end
 sample 'a', {x: 1, y:2}
 sample 'a', x: 1, y:2
 ```
+
+### save navigation operator
+
+nilだったらnilを返す  
+
+a = nil
+#a.upcase # error
+a&.upcase
+
