@@ -93,7 +93,9 @@ $ rails db:migrate
 $ rails db:rollback
 ```
 
-database reset
+database reset  
+DBをdropしてmigrateする  
+db:reset は drop して db schema を使って作る  
 
 ```
 $ rails db:migrate:reset
