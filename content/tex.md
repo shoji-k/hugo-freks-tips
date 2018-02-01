@@ -55,4 +55,13 @@ see https://tex.stackexchange.com/questions/8357/how-to-have-local-package-overr
 texはdvi(device independent)ファイルを出力する  
 dviファイルがソフトなどで読み込まれ表示される  
 
+# latexmk
+
+複数の変換を一気にできる  
+
+dvi 経由で pdf を生成する  
+$ latexmk -pdfdvi sample.tex  
+
+pdflatex で pdf を生成する  
+$ latexmk -pdf sample.tex  
 
