@@ -22,3 +22,6 @@ reference: [テンプレート文字列 \- JavaScript \| MDN](https://developer.
 
 reference: [アロー関数 \- JavaScript \| MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/arrow_functions)
 
+# spread operator (...args)
+
+reference: [スプレッド演算子 \- JavaScript \| MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Spread_operator)
