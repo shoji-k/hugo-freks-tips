@@ -197,3 +197,22 @@ render(
 )
 ```
 
+# ContainerとComponent
+
+## Presentational Components
+
+componentと呼ばれる？  
+
+Reactでの普通のコンポーネント  
+propsを使ってデータのやりとりする  
+
+## Container Components
+
+containerと呼ばれる？  
+
+Redux特有のもので、react-reduxをimport
+データは、storeのstateから渡される  
+データの変更もactionをdispatchに渡すことで行われる  
+connect()を使ってコンポーネントをラップすることで、dispatchやstateが使えるようになる  
+
+ref: [Redux ExampleのTodo Listをはじめからていねいに\(1\) \- Qiita](https://qiita.com/xkumiyu/items/9dfe51d2bcb3bdb06da3)
