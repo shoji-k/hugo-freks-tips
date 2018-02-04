@@ -94,6 +94,8 @@ let input
 とするとコンポーネント構築時に、input変数へinputのオブジェクトが代入される  
 あとで、 input.value で値をとったりできる  
 
+# props.children
 
-
+<myComponent>xxx</myComponent>のxxxを取得したい場合、  
+this.props.childrenで取れる  
 
