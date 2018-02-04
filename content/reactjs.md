@@ -81,6 +81,18 @@ $ yarn start
 
 then access localhost:13000  
 
+# refs
+
+```
+let input
+
+<input ref={(node) => {
+  input = node
+}} />
+```
+
+とするとコンポーネント構築時に、input変数へinputのオブジェクトが代入される  
+あとで、 input.value で値をとったりできる  
 
 
 
