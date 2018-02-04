@@ -216,3 +216,12 @@ Redux特有のもので、react-reduxをimport
 connect()を使ってコンポーネントをラップすることで、dispatchやstateが使えるようになる  
 
 ref: [Redux ExampleのTodo Listをはじめからていねいに\(1\) \- Qiita](https://qiita.com/xkumiyu/items/9dfe51d2bcb3bdb06da3)
+
+# connect
+
+connect([mapStateToProps], [mapDispatchToProps])  
+
+引数  
+mapDispatchToProps(dispatch, [ownProps])  
+mapStateToProps(state, [ownProps])  
+
