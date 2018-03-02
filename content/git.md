@@ -167,3 +167,7 @@ $ git submodule add https://github.com/twbs/bootstrap.git bootstrap
 submoduleのディレクトリ内は、submoduleのリポジトリを参照する  
 外側に出ると外側のリポジトリ  
 
+# zip diff files
+
+$ git archive --format=zip --prefix=diff/ HEAD `git diff --diff-filter=d --name-only HEAD HEAD^^^` -o diff.zip
+
