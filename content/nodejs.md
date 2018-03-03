@@ -24,6 +24,13 @@ sudo apt-get install -y nodejs
 
 npmもインストールされる  
 
+# version up npm
+
+$ npm install -g npm
+
+# check global directory and modules
+
+$ npm list -g
 
 # use docker
 
