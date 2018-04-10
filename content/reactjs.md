@@ -25,6 +25,30 @@ const squares = this.state.squares.slice();
 var newPlayer = Object.assign({}, player, {score: 2});
 ```
 
+## jsx
+
+jsxの<div /> syntaxはビルドのタイミングで、React.createElement() に変換される
+
+## immutable
+
+Immutatability is important  
+配列やハッシュの値を変えるときは元のを直接変えずに新しく用意してがえたほうがいい  
+[why-immutability-is-important: Intro To React \- React](https://reactjs.org/tutorial/tutorial.html#why-immutability-is-important)  
+
+## onClick function
+
+```
+<button className="square" onClick={alert('click')}>
+```
+
+だとクリックせずともalertが実行される
+
+```
+<button className="square" onClick={() => alert('click')}>
+```
+
+と書く
+
 ## Functional Components
 
 propを受けてrenderするだけのClassはFunctionに変えられる
@@ -54,6 +78,20 @@ function Square(props) {
 ```
 
 となる
+
+```
+<button className="square" onClick={props.onClick()}>
+```
+
+だとfunctionが実行されてしまうのでだめで
+
+```
+<button className="square" onClick={props.onClick}>
+```
+
+だとfunctionを引き渡すだけでうまく動く
+
+Squareコンポーネントのようにstateを持たないコンポーネントは Controlled Component と呼ばれる
 
 # creating a new app
 
