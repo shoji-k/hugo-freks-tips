@@ -66,6 +66,13 @@ mysql -u user -h hostname -P portnum -p (database name)
 
 show create datbase (database name);  
 
+# show database engine type by sql
+
+```
+use information_schema;
+select table_schema, table_name, engine from tables;
+```
+
 # avoid truncate foreign key error
 
 外部キー制約でテーブルにレコードがなくてもエラーが発生する  
