@@ -9,8 +9,9 @@ tags = [ "aws", "ecr" ]
 
 # backup remote files
 
-$ rsync --exclude="/src/app/cache" --exclude=".git" --exclude=".gitignore" -rltuvz sample:/var/www/html ./
+$ rsync -C --filter=":- .gitignore" --exclude="/src/app/cache" --exclude=".git" --exclude=".gitignore" -rltuvz sample:/var/www/html ./
 
+-C --filter=":- .gitignore" auto-ignore files in the same way CVS does  
 -r recursive  
 -l copy symlinks  
 -t preserve modification time  

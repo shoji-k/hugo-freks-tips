@@ -51,7 +51,7 @@ drop user sample@localhost;
 select user, host, password from mysql.user;  
 
 # create database
-CREATE DATABASE (database name) CHARACTER SET utf8;  
+CREATE DATABASE (database name) CHARACTER SET utf8mb4;  
 
 # delete database
 drop database sample;  
@@ -61,6 +61,10 @@ show databases;
 
 # connect
 mysql -u user -h hostname -P portnum -p (database name)  
+
+# show character code
+
+show create datbase (database name);  
 
 # avoid truncate foreign key error
 
@@ -78,3 +82,7 @@ set foreign_key_checks = 0;
 truncate some_table;
 set foreign_key_checks = 1;
 ```
+
+# utf8 or utf8mb4
+
+[MySQL で utf8 と utf8mb4 の混在で起きること \- @tmtms のメモ](https://tmtms.hatenablog.com/entry/2016/09/06/mysql-utf8)  
