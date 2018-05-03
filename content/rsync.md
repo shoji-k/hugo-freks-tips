@@ -19,4 +19,5 @@ $ rsync -C --filter=":- .gitignore" --exclude="/src/app/cache" --exclude=".git" 
 -v verbose  
 -z compress  
 
-
+-n dry run  
+--delete 手元で消したファイルを向こう側でも消す  
