@@ -12,7 +12,7 @@ tags = [ "node" ]
 偶数番号が安定バージョン e.g. Node v.6.x.x  
 奇数番号はサポートが短い e.g. Node v.7.x.x   
 
-# install
+# install node
 
 [package-manager](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)  
 
@@ -23,6 +23,17 @@ sudo apt-get install -y nodejs
 ```
 
 npmもインストールされる  
+
+# install node, use nvm
+
+[creationix/nvm: Node Version Manager \- Simple bash script to manage multiple active node\.js versions](https://github.com/creationix/nvm)
+
+```
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+source ~/.bashrc
+nvm install node # stable version
+nvm use node # use stable version
+```
 
 # version up npm
 
