@@ -93,3 +93,17 @@ set foreign_key_checks = 1;
 # utf8 or utf8mb4
 
 [MySQL で utf8 と utf8mb4 の混在で起きること \- @tmtms のメモ](https://tmtms.hatenablog.com/entry/2016/09/06/mysql-utf8)  
+
+# slow log
+
+$ vi my.cnf
+
+```
+[mysqld]
+slow_query_log
+slow_query_log_file = /tmp/mysql-slow.log
+long_query_time = 1.0
+```
+
+$ mysqldumpslow /tmp/mysql-slow.log > /tmp/slow_summary.log  
+
