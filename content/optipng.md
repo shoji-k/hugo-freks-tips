@@ -19,10 +19,14 @@ $ sudo yum install optipng
 
 $ optipng -o7 sample.png
 
+-o7 level7(max)  
+
 with backup
 
 $ optipng -o7 -keep sample.png
 
 then create sample.png.bak too
 
+bulk compress
 
+$ find . -iname *.png -type f | xargs optipng -o7
