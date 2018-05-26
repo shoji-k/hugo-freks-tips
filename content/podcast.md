@@ -14,6 +14,9 @@ tags = [ "podcast" ]
 - [Accidental Tech Podcast](http://atp.fm/)
 - [Work In Progress](https://slack.com/podcast)
 - [The Changelog with Adam Stacoviak and Jerod Santo \| Changelog](https://changelog.com/podcast)
+- [Go Time with Erik St\. Martin, Carlisia Pinto, and Brian Ketelsen \| News and podcasts for developers \| Changelog](https://changelog.com/gotime)
+- [Kubernetes Podcast from Google](https://kubernetespodcast.com/)
+- [Google Cloud Platform Podcast](https://www.gcppodcast.com/)
 
 # English
 
